@@ -16,6 +16,37 @@
     <!--Directiva de atributo appCustomDirective-->
    <!-- <button appCustomDirective>send</button>-->
   
+   <!-------------------------------------------->
+ 
+   <!--EJEMPLOS DE DIRECTIVAS EXTRUCTURALES-->
+
    <!-- Ejecuto con el click el evento de la variable show. aparece y desaparece con el click del button-->
     <button *ngIf="show">send</button>
+   
+   <!--Tambien podemos agregrar una exprecion (true, false, 1<2, 1<0, show === true)-->
+    <!--<button *ngIf="1 < 2">send</button>-->
+ 
+    <!------------------------------------------------>
+  
+    <!--EJEMPLO CON MALA PRACTICA PARA ENTENDER-->
+    <!--Esta expresión genera item 1,2,3 lo creara en cada iteración, en este caso seran 3 [1,2,3] -->
+   <!--   <ul *ngFor="let item of [1,2,3]">
+                 <li>item 1</li>        
+                 <li>item 2</li>        
+                 <li>item 3</li>
+          </ul>-->
+
+ <!--Nos crea 3 item uno por cada iteración, el indice nos enumera 
+    y first and last nosmuestra si es el primeroo el ultimo con true and false-->         
+    <ul> 
+        <li *ngFor="
+                    let item of [1,2,3];
+                    let indice = index;
+                    let primero = first;
+                    let ultimo = last" 
+>
+            item {{indice}} {{ item }} {{primero}} {{ultimo}}
+        </li>   35MIN     
+       
+    </ul>
 </div>
