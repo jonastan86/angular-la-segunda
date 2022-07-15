@@ -1,0 +1,21 @@
+<p>Cabecera Electro</p>
+<!--Agregamos la funcion onClick() de cabecera.component.ts-->
+<!--Ejecutamos el evento ($event)  cuando hacemos click-->
+<!--Hacemos en button dinamico usando la variable creada en cabecera.component llamada "type"-->
+<!--Al hacer click cambia de type=button   a  type=submit -->
+<button [type]="type" (click)="onClick($event)">Click me!</button>
+
+<div>
+    <!--Utilizamos la variable {{name}} del componete al template -->
+    <label for="name">Productos:{{ name }}</label>
+    <br/>
+    <!--Modificamos la variable {{name}} del componete desde el template -->
+    <!--Para utiliza el ngModel debemos importar en app.Module el FormsModule -->
+    <input id="name" [(ngModel)]="name" placeholder="name"/>
+    
+    <!--Directiva de atributo appCustomDirective-->
+   <!-- <button appCustomDirective>send</button>-->
+  
+   <!-- Ejecuto con el click el evento de la variable show. aparece y desaparece con el click del button-->
+    <button *ngIf="show">send</button>
+</div>
