@@ -46,7 +46,28 @@
                     let ultimo = last" 
 >
             item {{indice}} {{ item }} {{primero}} {{ultimo}}
-        </li>   35MIN     
+        </li>        
        
     </ul>
+   
+    <!--Estas directivas estructurales comienzan con * y modifican el html.
+         AL precionar el button CLICK ME cambiara de RED a default-->
+    <div [ngSwitch]="color">
+   
+    <div *ngSwitchCase="'blue'"> RED </div>
+    <div *ngSwitchDefault> Default </div>
+   </div>
+   
+   
+   
+    <!--EL button tiene la clase(otra-clase) Al hacer click con el button de arriba
+         le agregamos una clase a este button quedando coo clase (mi-clase otra-clase) -->
+    <button [ngClass]="{ 'mi-clase': show, 'otra-clase': 1<2 }">Enviar</button>
+    <button [class.active]="show">Enviar2</button>
+
+
+        <!--Hay 2 formas. El button es blue. Esta definido con la variable COLOR en cabecera.component.ts 
+            pero cuando hacemos click en el primer button le cambiamos el color a red-->
+        <button [ngStyle]="{ color: color }">Enviar3</button> 
+        <button [style.color]="color">Enviar4</button>   
 </div>

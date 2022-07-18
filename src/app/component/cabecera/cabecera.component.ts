@@ -12,6 +12,7 @@ export class CabeceraComponent implements OnInit {
   colors: string[]= [];
   name = 'productos';
   show = false;
+  color = 'blue';
 
   //Eventos
   onClick(event: MouseEvent){
@@ -19,6 +20,7 @@ export class CabeceraComponent implements OnInit {
       //this para hacer referencia d la clase type
       this.type = 'submit'//Cuando haga click 'button' se convertirá en 'submit' 
       this.show = !this.show //show es false cuando le damos click la pasamos a su opuesto con "!"
+      this.color = 'red'; 
     }
 
   constructor() { }
