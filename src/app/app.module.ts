@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 // Component
 import { CabeceraComponent } from './component/cabecera/cabecera.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 //Directives
 import { CustomDirectiveDirective } from './directives/custom-directive.directive';
@@ -15,7 +16,8 @@ import { CustomDirectiveDirective } from './directives/custom-directive.directiv
   declarations: [
     AppComponent,
     CabeceraComponent,
-    CustomDirectiveDirective
+    CustomDirectiveDirective,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
