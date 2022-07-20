@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Hero } from 'src/app/interfaces/hero';
 
 @Component({
   selector: 'app-card-container',
@@ -24,8 +25,4 @@ export class CardContainerComponent  {
 
 
 
-}
-interface Hero {
-  id: number;
-  name: string;
 }
