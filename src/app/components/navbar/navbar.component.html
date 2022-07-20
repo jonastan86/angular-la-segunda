@@ -5,12 +5,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Features</a>
-          <a class="nav-link" href="#">Pricing</a>
-          <a class="nav-link disabled">Disabled</a>
+        <div *ngFor="let item of navItem" class="navbar-nav">
+          <a class="nav-link active" aria-current="page" [href]="item.url">{{ item.label}}</a>
+         
+         
         </div>
       </div>
     </div>
-  </nav> 1.10hs
+  </nav> 

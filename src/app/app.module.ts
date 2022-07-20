@@ -8,16 +8,20 @@ import { AppComponent } from './app.component';
 // Component
 import { CabeceraComponent } from './component/cabecera/cabecera.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { CardComponent } from './components/card/card.component';
+import { CardContainerComponent } from './components/card-container/card-container.component';
 //Directives
 import { CustomDirectiveDirective } from './directives/custom-directive.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
     CustomDirectiveDirective,
-    NavbarComponent
+    NavbarComponent,
+    CardComponent,
+    CardContainerComponent
   ],
   imports: [
     BrowserModule,
