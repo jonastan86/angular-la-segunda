@@ -23,6 +23,13 @@ export class CardContainerComponent  {
 
   constructor() { }
 
-
-
-}
+  removeChild(hero:any): void{
+    // Mostramos el elemento en consola
+    console.log('removed', hero);
+    //Iteramos todos los elementos menos(!==) el hero que ueremos remover y guardamos en la variable filtered
+    const filtered = this.heroes.filter ( (item:Hero)=> item.id !== hero.id);
+    console.log(filtered); //Mostramos lo que guardamos en la filtered
+    this.heroes = filtered; // remplazamos el array heroes por los datos guardados en filtered
+    // De esa forma no mostrara el elemnto que quisimos eliminar
+  }
+} 

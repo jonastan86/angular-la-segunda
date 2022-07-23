@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Hero } from 'src/app/interfaces/hero';
 
 @Component({
@@ -8,11 +8,25 @@ import { Hero } from 'src/app/interfaces/hero';
 })
 export class CardComponent {
   @Input() hero!: Hero;
-  
+  //Definimos la variable removeChild  para emitir nuevo evento con EvenEmitter
+  @Output() removeChild = new EventEmitter<Hero>();
   
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onClick(): void {    
+      console.log('click', this.hero)    
+  }
+  onRemove(): void {
+    // Primero tremos el elemento que queremos remover (this.hero)
+    console.log('remove', this.hero);
+   
+    //Emitimos el evento para remover el elemnto
+    this.removeChild.emit(this.hero);
+  
+}
+
+ 
 }

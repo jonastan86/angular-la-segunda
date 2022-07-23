@@ -1,8 +1,13 @@
+<!--con el *ngif creamos cada elemento del array hero  -->
 <div *ngIf="hero" class="card">
     <img src="https://via.placeholder.com/300" class="card-img-top" alt="image example">
     <div class="card-body">
+      
       <h5 class="card-title">{{hero.name}}</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <button (click)= "onClick()" class="btn btn-primary">Go somewhere</button>
+      <!--onRemove es una función ue remueve un elemento y viene de card.component.ts-->
+      <button (click)= "onRemove()" class="btn btn-danger">Remove</button>
+    
     </div>
   </div>

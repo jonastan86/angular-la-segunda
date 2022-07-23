@@ -1,8 +1,11 @@
 
 <article class="cards">
+    <!--[hero]viene del input creado en card.component.html -->
     <ng-container *ngFor="let hero of heroes">
-        <!--[hero]viene del input creado en car.component.html -->
-        <app-card [hero] ="hero"></app-card>
+        
+        <!--importamos la variable "removeChild" q ejecuta un evento creada por nosotros de card.component.html
+        que a la vez ejecuta la variable removeChild creada en en card.conteiner.component.ts-->
+        <app-card (removeChild)="removeChild($event)" [hero] ="hero"></app-card>
     </ng-container>
     
 </article>
